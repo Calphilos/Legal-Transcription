@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upload Work - Legal Transcription Experts</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Upload Your Audio</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="upload.html">Upload Work</a></li>
+        <li><a href="dashboard.html">Client Dashboard</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="clientName">Your Name:</label>
+        <input type="text" id="clientName" name="clientName" required>
+
+        <label for="clientEmail">Email:</label>
+        <input type="email" id="clientEmail" name="clientEmail" required>
+
+        <label for="audioFile">Select Audio File:</label>
+        <input type="file" id="audioFile" name="audioFile" accept="audio/*" required>
+
+        <button type="submit">Submit File</button>
+      </form>
+
+      <div style="margin-top: 20px;">
+        <a href="/pay" class="button">Pay Now</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Legal Transcription Experts</p>
+  </footer>
+</body>
+</html>

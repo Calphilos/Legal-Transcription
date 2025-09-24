@@ -1,0 +1,4 @@
+<!-- save as images/logo.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64" fill="#FFD600">
+  <path d="M12 2l4 4h-3v6.17a3 3 0 0 1 2 2.83c0 1.66-1.34 3-3 3s-3-1.34-3-3a3 3 0 0 1 2-2.83V6H8l4-4zm-6 8l-4 7h8l-4-7zm12 0l-4 7h8l-4-7zM2 20h20v2H2v-2z"></path>
+</svg>
