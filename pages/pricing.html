@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transparent Legal Transcription Pricing - Verdilex</title>
+    <meta name="description" content="Clear, transparent pricing for professional legal transcription services. Calculator-driven design with no hidden fees. Standard, Priority, and Rush delivery options available." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fverdilext9095back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="font-inter text-text-primary bg-background">
+
+    <!-- Navigation Header -->
+    <nav class="bg-gray-50 shadow-sm border-b border-border sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L2 7v10c0 5.55 3.84 9.739 9 11 5.16-1.261 9-5.45 9-11V7l-10-5z"/>
+                        <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" fill="none"/>
+                    </svg>
+                    <span class="font-playfair text-xl font-bold text-primary">Verdilex</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-text-secondary hover:text-primary transition-colors duration-250">Home</a>
+                    <a href="services.html" class="text-text-secondary hover:text-primary transition-colors duration-250">Services</a>
+                    <a href="pricing.html" class="text-primary font-semibold">Pricing</a>
+                    <a href="../index.html#testimonials" class="text-text-secondary hover:text-primary transition-colors duration-250">Testimonials</a>
+                    <a href="../index.html#contact" class="text-text-secondary hover:text-primary transition-colors duration-250">Contact</a>
+                    <button class="btn-primary">Get Free Consultation</button>
+                </div>
+                <button class="md:hidden p-2" id="mobile-menu-btn">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <div class="bg-surface py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="flex" aria-label="Breadcrumb">
+                <ol class="flex items-center space-x-4">
+                    <li>
+                        <a href="../index.html" class="text-text-secondary hover:text-primary transition-colors duration-250">Home</a>
+                    </li>
+                    <li>
+                        <svg class="h-4 w-4 text-text-secondary mx-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                    </li>
+                    <li>
+                        <span class="text-primary font-semibold">Pricing</span>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="bg-primary text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="font-playfair text-4xl md:text-5xl font-bold mb-6">
+                Transparent Pricing - No Hidden Fees
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed opacity-90">
+                Clear cost structures and real-time price estimates. Professional legal transcription rates with satisfaction guarantee policies.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button class="bg-accent text-white font-semibold px-8 py-4 rounded-lg hover:bg-accent/90 transition-all duration-250 w-full sm:w-auto" onclick="scrollToCalculator()">
+                    Calculate Your Quote
+                </button>
+                <a href="services.html" class="bg-white/20 backdrop-blur-sm text-white border border-white/30 font-semibold px-8 py-4 rounded-lg hover:bg-white/30 transition-all duration-250 w-full sm:w-auto">
+                    View Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Rate Calculator -->
+    <section class="py-20 bg-white" id="rate-calculator">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-playfair text-3xl md:text-4xl font-bold mb-6">
+                    Interactive Rate Calculator
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Get instant, accurate pricing with real-time updates and detailed cost breakdowns
+                </p>
+            </div>
+            
+            <div class="bg-surface rounded-lg p-8 mb-12">
+                <div class="grid md:grid-cols-4 gap-6 mb-8">
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Service Type</label>
+                        <select class="form-input w-full" id="service-type" onchange="updatePricing()">
+                            <option value="deposition">Deposition</option>
+                            <option value="court">Court Proceeding</option>
+                            <option value="corporate">Corporate Meeting</option>
+                            <option value="interview">Legal Interview</option>
+                            <option value="document">Document Review</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Audio Quality</label>
+                        <select class="form-input w-full" id="audio-quality" onchange="updatePricing()">
+                            <option value="clear">Clear Quality</option>
+                            <option value="moderate">Moderate Quality</option>
+                            <option value="poor">Poor Quality (+25%)</option>
+                            <option value="multiple">Multiple Speakers (+15%)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Turnaround Time</label>
+                        <select class="form-input w-full" id="turnaround-time" onchange="updatePricing()">
+                            <option value="standard">Standard (48 hours)</option>
+                            <option value="priority">Priority (24 hours)</option>
+                            <option value="rush">Rush (Same day)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Audio Length (minutes)</label>
+                        <input type="number" class="form-input w-full" id="audio-length" placeholder="60" min="1" max="600" onchange="updatePricing()" oninput="updatePricing()" />
+                    </div>
+                </div>
+                
+                <!-- Real-time pricing display -->
+                <div class="bg-white rounded-lg p-6 mb-6">
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="text-sm text-text-secondary mb-2">Per-Minute Rate</div>
+                            <div class="text-2xl font-bold text-primary" id="per-minute-rate">$2.50</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-sm text-text-secondary mb-2">Estimated Total</div>
+                            <div class="text-3xl font-bold text-accent" id="total-estimate">$150.00</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-sm text-text-secondary mb-2">Delivery Time</div>
+                            <div class="text-lg font-semibold text-success" id="delivery-time">48 hours</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cost breakdown -->
+                <div class="bg-primary/5 rounded-lg p-6" id="cost-breakdown">
+                    <h4 class="font-semibold mb-4">Cost Breakdown</h4>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>Base transcription rate (<span id="minutes-display">60</span> minutes)</span>
+                            <span id="base-cost">$150.00</span>
+                        </div>
+                        <div class="flex justify-between" id="quality-adjustment" style="display: none;">
+                            <span>Audio quality adjustment</span>
+                            <span id="quality-cost">$0.00</span>
+                        </div>
+                        <div class="flex justify-between" id="rush-adjustment" style="display: none;">
+                            <span>Rush delivery surcharge</span>
+                            <span id="rush-cost">$0.00</span>
+                        </div>
+                        <div class="border-t border-border pt-2 mt-2">
+                            <div class="flex justify-between font-semibold">
+                                <span>Total Estimated Cost</span>
+                                <span id="breakdown-total">$150.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <button class="btn-primary mr-4">Get Official Quote</button>
+                    <button class="bg-white text-primary border border-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-white transition-all duration-250">
+                        Save Calculation
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Tiers Comparison -->
+    <section class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-3xl md:text-4xl font-bold mb-6">
+                    Service Tiers & Features
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Choose the service level that best fits your timeline and budget requirements
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Standard Tier -->
+                <div class="bg-white rounded-lg p-8 text-center border border-border">
+                    <div class="mb-6">
+                        <h3 class="font-playfair text-2xl font-semibold mb-2">Standard</h3>
+                        <div class="text-4xl font-bold text-primary mb-2">$2.50</div>
+                        <div class="text-text-secondary">per audio minute</div>
+                    </div>
+                    
+                    <div class="text-left mb-8">
+                        <div class="text-center mb-4">
+                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold">48-Hour Delivery</span>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-success mr-3 mt-1">✓</span>
+                                <span>99%+ accuracy guarantee</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-success mr-3 mt-1">✓</span>
+                                <span>Legal formatting included</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-success mr-3 mt-1">✓</span>
+                                <span>Confidentiality protection</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-success mr-3 mt-1">✓</span>
+                                <span>Speaker identification</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-success mr-3 mt-1">✓</span>
+                                <span>One round of revisions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-success mr-3 mt-1">✓</span>
+                                <span>Word and PDF formats</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <button class="btn-primary w-full">Get Started</button>
+                </div>
+                
+                <!-- Priority Tier -->
+                <div class="bg-primary text-white rounded-lg p-8 text-center relative transform scale-105 border-2 border-accent">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-accent text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                    </div>
+                    <div class="mb-6">
+                        <h3 class="font-playfair text-2xl font-semibold mb-2">Priority</h3>
+                        <div class="text-4xl font-bold mb-2">$3.75</div>
+                        <div class="opacity-90">per audio minute</div>
+                    </div>
+                    
+                    <div class="text-left mb-8">
+                        <div class="text-center mb-4">
+                            <span class="bg-accent text-white px-3 py-1 rounded-full text-sm font-semibold">24-Hour Delivery</span>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-accent mr-3 mt-1">✓</span>
+                                <span>99%+ accuracy guarantee</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-accent mr-3 mt-1">✓</span>
+                                <span>Priority queue processing</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-accent mr-3 mt-1">✓</span>
+                                <span>Progress tracking included</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-accent mr-3 mt-1">✓</span>
+                                <span>Enhanced speaker identification</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-accent mr-3 mt-1">✓</span>
+                                <span>Two rounds of revisions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-accent mr-3 mt-1">✓</span>
+                                <span>Multiple delivery formats</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <button class="bg-accent text-white font-semibold px-6 py-3 rounded-lg hover:bg-accent/90 transition-all duration-250 w-full">
+                        Get Started
+                    </button>
+                </div>
+                
+                <!-- Rush Tier -->
+                <div class="bg-white rounded-lg p-8 text-center border border-border">
+                    <div class="mb-6">
+                        <h3 class="font-playfair text-2xl font-semibold mb-2">Rush</h3>
+                        <div class="text-4xl font-bold text-primary mb-2">$5.00</div>
+                        <div class="text-text-secondary">per audio minute</div>
+                    </div>
+                    
+                    <div class="text-left mb-8">
+                        <div class="text-center mb-4">
+                            <span class="bg-error/10 text-error px-3 py-1 rounded-full text-sm font-semibold">Same-Day Delivery</span>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-success mr-3 mt-1">✓</span>
+                                <span>99%+ accuracy guarantee</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-success mr-3 mt-1">✓</span>
+                                <span>Dedicated transcriptionist</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-success mr-3 mt-1">✓</span>
+                                <span>Real-time status updates</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-success mr-3 mt-1">✓</span>
+                                <span>Premium quality assurance</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-success mr-3 mt-1">✓</span>
+                                <span>Unlimited revisions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-success mr-3 mt-1">✓</span>
+                                <span>Direct contact with team</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <button class="btn-primary w-full">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volume Discount Structure -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-3xl md:text-4xl font-bold mb-6">
+                    Volume Discount Structure
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Progressive pricing bands with substantial savings for monthly commitments and high-volume clients
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-6 mb-12">
+                <!-- Volume Tier 1 -->
+                <div class="bg-surface rounded-lg p-6 text-center">
+                    <div class="text-3xl font-bold text-primary mb-2">5%</div>
+                    <div class="text-sm text-text-secondary mb-4">Savings</div>
+                    <div class="font-semibold mb-2">100+ Minutes/Month</div>
+                    <div class="text-sm text-text-secondary">Regular clients</div>
+                </div>
+                
+                <!-- Volume Tier 2 -->
+                <div class="bg-surface rounded-lg p-6 text-center">
+                    <div class="text-3xl font-bold text-primary mb-2">12%</div>
+                    <div class="text-sm text-text-secondary mb-4">Savings</div>
+                    <div class="font-semibold mb-2">500+ Minutes/Month</div>
+                    <div class="text-sm text-text-secondary">Growing firms</div>
+                </div>
+                
+                <!-- Volume Tier 3 -->
+                <div class="bg-surface rounded-lg p-6 text-center">
+                    <div class="text-3xl font-bold text-primary mb-2">20%</div>
+                    <div class="text-sm text-text-secondary mb-4">Savings</div>
+                    <div class="font-semibold mb-2">1,000+ Minutes/Month</div>
+                    <div class="text-sm text-text-secondary">Medium firms</div>
+                </div>
+                
+                <!-- Enterprise Tier -->
+                <div class="bg-primary text-white rounded-lg p-6 text-center">
+                    <div class="text-3xl font-bold mb-2">30%</div>
+                    <div class="text-sm opacity-90 mb-4">Savings</div>
+                    <div class="font-semibold mb-2">2,000+ Minutes/Month</div>
+                    <div class="text-sm opacity-90">Enterprise firms</div>
+                </div>
+            </div>
+            
+            <!-- Volume Savings Calculator -->
+            <div class="bg-surface rounded-lg p-8">
+                <h3 class="font-playfair text-2xl font-semibold mb-6 text-center">Monthly Volume Calculator</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Estimated Monthly Minutes</label>
+                        <input type="number" class="form-input w-full" id="monthly-minutes" placeholder="200" min="1" onchange="calculateVolumeDiscount()" oninput="calculateVolumeDiscount()" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Service Tier</label>
+                        <select class="form-input w-full" id="volume-tier" onchange="calculateVolumeDiscount()">
+                            <option value="2.50">Standard ($2.50/min)</option>
+                            <option value="3.75">Priority ($3.75/min)</option>
+                            <option value="5.00">Rush ($5.00/min)</option>
+                        </select>
+                    </div>
+                    <div class="flex items-end">
+                        <button class="btn-primary w-full" onclick="calculateVolumeDiscount()">Calculate Savings</button>
+                    </div>
+                </div>
+                
+                <div class="mt-8 grid md:grid-cols-3 gap-6" id="volume-results" style="display: none;">
+                    <div class="text-center">
+                        <div class="text-sm text-text-secondary mb-2">Regular Pricing</div>
+                        <div class="text-2xl font-bold text-text-secondary" id="regular-price">$500.00</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-sm text-text-secondary mb-2">Volume Discount</div>
+                        <div class="text-2xl font-bold text-success" id="discount-amount">$25.00</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-sm text-text-secondary mb-2">Your Monthly Cost</div>
+                        <div class="text-3xl font-bold text-primary" id="discounted-price">$475.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services Pricing -->
+    <section class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-3xl md:text-4xl font-bold mb-6">
+                    Additional Services & Add-ons
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Professional add-on services with transparent pricing for enhanced transcription experiences
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Expedited Delivery -->
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="font-semibold mb-3">Expedited Delivery</h3>
+                    <div class="text-2xl font-bold text-primary mb-2">+50%</div>
+                    <div class="text-sm text-text-secondary mb-4">of base rate</div>
+                    <ul class="text-sm space-y-1">
+                        <li>• 4-8 hour turnaround</li>
+                        <li>• Emergency processing</li>
+                        <li>• Weekend availability</li>
+                    </ul>
+                </div>
+                
+                <!-- Multiple Speaker ID -->
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="font-semibold mb-3">Enhanced Speaker ID</h3>
+                    <div class="text-2xl font-bold text-primary mb-2">+$0.25</div>
+                    <div class="text-sm text-text-secondary mb-4">per minute</div>
+                    <ul class="text-sm space-y-1">
+                        <li>• 5+ speaker identification</li>
+                        <li>• Name attribution</li>
+                        <li>• Voice pattern analysis</li>
+                    </ul>
+                </div>
+                
+                <!-- Timestamping -->
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="font-semibold mb-3">Precise Timestamping</h3>
+                    <div class="text-2xl font-bold text-primary mb-2">+$0.15</div>
+                    <div class="text-sm text-text-secondary mb-4">per minute</div>
+                    <ul class="text-sm space-y-1">
+                        <li>• Every 30-second marks</li>
+                        <li>• Video synchronization</li>
+                        <li>• Custom intervals</li>
+                    </ul>
+                </div>
+                
+                <!-- Foreign Language -->
+                <div class="bg-white rounded-lg p-6">
+                    <h3 class="font-semibold mb-3">Multilingual Service</h3>
+                    <div class="text-2xl font-bold text-primary mb-2">+25%</div>
+                    <div class="text-sm text-text-secondary mb-4">language premium</div>
+                    <ul class="text-sm space-y-1">
+                        <li>• Spanish, French, German</li>
+                        <li>• Native speakers</li>
+                        <li>• Legal terminology</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Terms & Policies -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-3xl md:text-4xl font-bold mb-6">
+                    Payment Terms & Guarantee
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Flexible payment options with industry-leading satisfaction guarantee policies
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Payment Options -->
+                <div>
+                    <h3 class="font-playfair text-2xl font-semibold mb-6">Payment Options</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1">
+                                <svg class="h-4 w-4 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="font-semibold mb-2">Invoice Terms</div>
+                                <div class="text-text-secondary">Net 30 payment terms for established clients. New clients: 50% deposit, balance due upon delivery.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1">
+                                <svg class="h-4 w-4 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="font-semibold mb-2">Accepted Payments</div>
+                                <div class="text-text-secondary">Credit cards (Visa, MasterCard, AmEx), ACH transfers, wire transfers, and business checks.</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 rounded-full w-8 h-8 flex items-center justify-center mr-4 mt-1">
+                                <svg class="h-4 w-4 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="font-semibold mb-2">Enterprise Billing</div>
+                                <div class="text-text-secondary">Monthly consolidated billing available for high-volume clients with custom payment terms.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Satisfaction Guarantee -->
+                <div>
+                    <h3 class="font-playfair text-2xl font-semibold mb-6">Satisfaction Guarantee</h3>
+                    <div class="bg-success/5 rounded-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <svg class="h-8 w-8 text-success mr-3" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <div class="font-semibold text-lg">99%+ Accuracy Guarantee</div>
+                        </div>
+                        <div class="space-y-4 text-text-secondary">
+                            <p>If transcription accuracy falls below 99%, we provide:</p>
+                            <ul class="space-y-2 ml-4">
+                                <li>• Complete re-transcription at no charge</li>
+                                <li>• Full refund if unsatisfied with revision</li>
+                                <li>• Rush re-delivery to meet your deadlines</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 bg-primary/5 rounded-lg p-6">
+                        <div class="font-semibold mb-3">Money-Back Promise</div>
+                        <div class="text-text-secondary">
+                            Not satisfied with our service? We'll refund your payment within 7 days of delivery. No questions asked.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-surface">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-3xl md:text-4xl font-bold mb-6">
+                    Pricing FAQ
+                </h2>
+                <p class="text-xl text-text-secondary">
+                    Common questions about our pricing structure and billing policies
+                </p>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-lg p-6">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center" data-target="pricing-faq1">
+                        <h3 class="font-semibold text-lg">How is audio length calculated for pricing?</h3>
+                        <svg class="h-5 w-5 transform transition-transform duration-250" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden mt-4 text-text-secondary" id="pricing-faq1">
+                        <p>We charge based on the actual audio length, rounded up to the nearest minute. For example, a 5 minutes and 30 seconds recording is billed as 6 minutes. We provide detailed time logs with each transcript showing exact audio duration.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-lg p-6">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center" data-target="pricing-faq2">
+                        <h3 class="font-semibold text-lg">Are there any setup fees or hidden costs?</h3>
+                        <svg class="h-5 w-5 transform transition-transform duration-250" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden mt-4 text-text-secondary" id="pricing-faq2">
+                        <p>No setup fees, no hidden costs. Our transparent pricing includes all standard features: transcription, formatting, speaker identification, confidentiality protocols, and one round of revisions. Additional services like timestamping or multilingual support have clearly stated add-on rates.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-lg p-6">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center" data-target="pricing-faq3">
+                        <h3 class="font-semibold text-lg">How do volume discounts work for irregular usage?</h3>
+                        <svg class="h-5 w-5 transform transition-transform duration-250" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden mt-4 text-text-secondary" id="pricing-faq3">
+                        <p>Volume discounts are calculated on a rolling 12-month basis. If your average monthly usage over the past year qualifies for a discount tier, you receive that discount rate immediately. No long-term contracts required - discounts adjust automatically as your usage changes.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-lg p-6">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center" data-target="pricing-faq4">
+                        <h3 class="font-semibold text-lg">What happens if I need to rush a large project?</h3>
+                        <svg class="h-5 w-5 transform transition-transform duration-250" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-content hidden mt-4 text-text-secondary" id="pricing-faq4">
+                        <p>For projects over 4 hours of audio requiring same-day delivery, we provide custom enterprise rush pricing that's typically 30-40% below our standard rush rates. Contact our team for immediate consultation and capacity confirmation. We can deploy multiple transcriptionists to meet tight deadlines.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enterprise CTA -->
+    <section class="py-20 bg-primary text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-playfair text-3xl md:text-4xl font-bold mb-6">
+                Enterprise Custom Pricing
+            </h2>
+            <p class="text-xl mb-8 opacity-90">
+                High-volume law firms save up to 30% with custom enterprise packages and dedicated account management
+            </p>
+            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8 max-w-2xl mx-auto">
+                <div class="grid grid-cols-3 gap-4 text-center">
+                    <div>
+                        <div class="text-2xl font-bold text-accent mb-2">2,000+</div>
+                        <div class="text-sm opacity-90">Minutes/Month</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-accent mb-2">30%</div>
+                        <div class="text-sm opacity-90">Maximum Savings</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-accent mb-2">24/7</div>
+                        <div class="text-sm opacity-90">Dedicated Support</div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button class="bg-accent text-white font-semibold px-8 py-4 rounded-lg hover:bg-accent/90 transition-all duration-250 w-full sm:w-auto">
+                    Contact Sales Team
+                </button>
+                <a href="services.html" class="bg-white/20 backdrop-blur-sm text-white border border-white/30 font-semibold px-8 py-4 rounded-lg hover:bg-white/30 transition-all duration-250 w-full sm:w-auto">
+                    Learn More About Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <svg class="h-8 w-8 text-accent mr-3" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 9.739 9 11 5.16-1.261 9-5.45 9-11V7l-10-5z"/>
+                            <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" fill="none"/>
+                        </svg>
+                        <span class="font-playfair text-xl font-bold">Verdilex</span>
+                    </div>
+                    <p class="text-white/80 mb-6">
+                        Professional legal transcription services with 99%+ accuracy guarantee for law firms nationwide.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-white/60 hover:text-accent transition-colors duration-250">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-white/60 hover:text-accent transition-colors duration-250">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Services</h3>
+                    <ul class="space-y-3 text-white/80">
+                        <li><a href="services.html" class="hover:text-accent transition-colors duration-250">Court Proceedings</a></li>
+                        <li><a href="services.html" class="hover:text-accent transition-colors duration-250">Depositions</a></li>
+                        <li><a href="services.html" class="hover:text-accent transition-colors duration-250">Corporate Meetings</a></li>
+                        <li><a href="services.html" class="hover:text-accent transition-colors duration-250">Document Transcription</a></li>
+                        <li><a href="services.html" class="hover:text-accent transition-colors duration-250">Rush Service</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Company</h3>
+                    <ul class="space-y-3 text-white/80">
+                        <li><a href="../index.html" class="hover:text-accent transition-colors duration-250">Home</a></li>
+                        <li><a href="services.html" class="hover:text-accent transition-colors duration-250">Services</a></li>
+                        <li><a href="pricing.html" class="hover:text-accent transition-colors duration-250">Pricing</a></li>
+                        <li><a href="../index.html#testimonials" class="hover:text-accent transition-colors duration-250">Testimonials</a></li>
+                        <li><a href="../index.html#contact" class="hover:text-accent transition-colors duration-250">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-6">Contact</h3>
+                    <ul class="space-y-3 text-white/80">
+                        <li class="flex items-center">
+                            <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            (555) 123-4567
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            info@verdilex.com
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-4 w-4 mr-2 mt-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            123 Legal Plaza, Suite 456<br />New York, NY 10001
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/20 pt-8 text-center text-white/60">
+                <p>&copy; 2025 Verdilex Transcription Services. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            // Mobile menu functionality would go here
+            console.log('Mobile menu clicked');
+        });
+
+        // Scroll to calculator function
+        function scrollToCalculator() {
+            document.getElementById('rate-calculator').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // Rate calculator functionality
+        function updatePricing() {
+            const serviceType = document.getElementById('service-type').value;
+            const audioQuality = document.getElementById('audio-quality').value;
+            const turnaroundTime = document.getElementById('turnaround-time').value;
+            const audioLength = parseInt(document.getElementById('audio-length').value) || 60;
+            
+            // Base rates
+            let baseRate = 2.50; // Standard rate
+            
+            // Adjust rate based on turnaround
+            if (turnaroundTime === 'priority') baseRate = 3.75;
+            if (turnaroundTime === 'rush') baseRate = 5.00;
+            
+            // Adjust rate based on service type
+            if (serviceType === 'court') baseRate *= 1.1;
+            if (serviceType === 'corporate') baseRate *= 0.9;
+            if (serviceType === 'document') baseRate *= 0.8;
+            
+            // Audio quality adjustments
+            let qualityMultiplier = 1.0;
+            if (audioQuality === 'poor') qualityMultiplier = 1.25;
+            if (audioQuality === 'multiple') qualityMultiplier = 1.15;
+            
+            // Calculate totals
+            const adjustedRate = baseRate * qualityMultiplier;
+            const baseCost = baseRate * audioLength;
+            const qualityAdjustment = (adjustedRate - baseRate) * audioLength;
+            const totalCost = adjustedRate * audioLength;
+            
+            // Update display
+            document.getElementById('per-minute-rate').textContent = '$' + adjustedRate.toFixed(2);
+            document.getElementById('total-estimate').textContent = '$' + totalCost.toFixed(2);
+            document.getElementById('minutes-display').textContent = audioLength;
+            document.getElementById('base-cost').textContent = '$' + baseCost.toFixed(2);
+            document.getElementById('breakdown-total').textContent = '$' + totalCost.toFixed(2);
+            
+            // Delivery time
+            let deliveryTime = '48 hours';
+            if (turnaroundTime === 'priority') deliveryTime = '24 hours';
+            if (turnaroundTime === 'rush') deliveryTime = 'Same day';
+            document.getElementById('delivery-time').textContent = deliveryTime;
+            
+            // Show/hide adjustments
+            if (qualityAdjustment > 0) {
+                document.getElementById('quality-adjustment').style.display = 'flex';
+                document.getElementById('quality-cost').textContent = '+$' + qualityAdjustment.toFixed(2);
+            } else {
+                document.getElementById('quality-adjustment').style.display = 'none';
+            }
+            
+            if (turnaroundTime === 'rush' || turnaroundTime === 'priority') {
+                document.getElementById('rush-adjustment').style.display = 'flex';
+                const rushCost = (adjustedRate - 2.50) * audioLength;
+                document.getElementById('rush-cost').textContent = '+$' + rushCost.toFixed(2);
+            } else {
+                document.getElementById('rush-adjustment').style.display = 'none';
+            }
+        }
+
+        // Volume discount calculator
+        function calculateVolumeDiscount() {
+            const monthlyMinutes = parseInt(document.getElementById('monthly-minutes').value) || 0;
+            const baseTierRate = parseFloat(document.getElementById('volume-tier').value);
+            
+            if (monthlyMinutes === 0) {
+                document.getElementById('volume-results').style.display = 'none';
+                return;
+            }
+            
+            // Determine discount percentage
+            let discountPercent = 0;
+            if (monthlyMinutes >= 100 && monthlyMinutes < 500) discountPercent = 5;
+            else if (monthlyMinutes >= 500 && monthlyMinutes < 1000) discountPercent = 12;
+            else if (monthlyMinutes >= 1000 && monthlyMinutes < 2000) discountPercent = 20;
+            else if (monthlyMinutes >= 2000) discountPercent = 30;
+            
+            // Calculate costs
+            const regularPrice = baseTierRate * monthlyMinutes;
+            const discountAmount = regularPrice * (discountPercent / 100);
+            const discountedPrice = regularPrice - discountAmount;
+            
+            // Update display
+            document.getElementById('regular-price').textContent = '$' + regularPrice.toFixed(2);
+            document.getElementById('discount-amount').textContent = '-$' + discountAmount.toFixed(2);
+            document.getElementById('discounted-price').textContent = '$' + discountedPrice.toFixed(2);
+            
+            // Show results
+            document.getElementById('volume-results').style.display = 'grid';
+        }
+
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const target = this.dataset.target;
+                const content = document.getElementById(target);
+                const icon = this.querySelector('svg');
+                
+                if (content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    icon.classList.add('rotate-180');
+                } else {
+                    content.classList.add('hidden');
+                    icon.classList.remove('rotate-180');
+                }
+            });
+        });
+
+        // Initialize calculator with default values
+        window.addEventListener('load', function() {
+            updatePricing();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

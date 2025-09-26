@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Enhanced Navy Blue Theme */
+  --color-primary: #0f1e3d; /* Deeper navy for stronger authority */
+  --color-secondary: #1a365d; /* Rich navy blue */
+  --color-accent: #3182ce; /* Navy blue accent for consistency */
+  
+  /* Background Colors - Navy themed */
+  --color-background: #ffffff; /* Clean white */
+  --color-surface: #f1f5f9; /* Slightly navy-tinted gray */
+  
+  /* Text Colors */
+  --color-text-primary: #0f1e3d; /* Deep navy for text */
+  --color-text-secondary: #1a365d; /* Navy blue for secondary text */
+  
+  /* Status Colors - Navy complementary */
+  --color-success: #065f46; /* Deep green */
+  --color-warning: #b45309; /* Warm amber */
+  --color-error: #991b1b; /* Deep red */
+  
+  /* Border Colors */
+  --color-border: #cbd5e1; /* Navy-tinted borders */
+  
+  /* Shadow Values with Navy tint */
+  --shadow-cta: 0 4px 6px -1px rgba(15, 30, 61, 0.1);
+  --shadow-card: 0 1px 3px 0 rgba(15, 30, 61, 0.08);
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    color: var(--color-text-primary);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white font-semibold px-6 py-3 rounded-lg transition-all duration-250 ease-in-out;
+    box-shadow: var(--shadow-cta);
+  }
+  
+  .btn-primary:hover {
+    @apply bg-secondary transform -translate-y-0.5;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg p-6;
+    box-shadow: var(--shadow-card);
+  }
+  
+  .form-input {
+    @apply border border-border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-250 ease-in-out;
+  }
+  
+  .section-separator {
+    @apply border-t border-border;
+  }
+}
+
+@layer utilities {
+  .text-accent {
+    color: var(--color-accent);
+  }
+  
+  .bg-accent {
+    background-color: var(--color-accent);
+  }
+  
+  .bg-accent\/90 {
+    background-color: rgba(49, 130, 206, 0.9);
+  }
+  
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-crimson {
+    font-family: 'Crimson Text', serif;
+  }
+  
+  .duration-250 {
+    transition-duration: 250ms;
+  }
+  
+  /* Additional navy theme utilities */
+  .bg-primary\/70 {
+    background-color: rgba(15, 30, 61, 0.7);
+  }
+  
+  .bg-primary\/10 {
+    background-color: rgba(15, 30, 61, 0.1);
+  }
+  
+  .bg-primary\/20 {
+    background-color: rgba(15, 30, 61, 0.2);
+  }
+  
+  .text-primary {
+    color: var(--color-primary);
+  }
+  
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+  
+  .border-primary {
+    border-color: var(--color-primary);
+  }
+}
