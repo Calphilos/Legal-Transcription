@@ -10,10 +10,6 @@
 
   <link rel="stylesheet" href="style.css">
   <style>
-    html {
-  scroll-behavior: smooth;
-}
-
     body { 
       font-family: 'Roboto', sans-serif; /* changed font */
       margin:0; 
@@ -39,98 +35,24 @@
     .logo { width:56px; height:56px; display:block; }
     .title h1 { margin:0; font-size:1.6rem; letter-spacing:0.2px; font-family:'Roboto', sans-serif; }
     .title p { margin:0; font-size:0.95rem; color:#e6eef8; font-family:'Roboto', sans-serif; }
-nav a {
-  color: #fff;
-  margin: 0 12px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
-  padding-bottom: 4px;
-}
-
-nav a:hover {
-  color: #FFD600; /* highlight yellow */
-  border-bottom: 2px solid #FFD600; /* subtle underline effect */
-}
 
     /* nav */
-nav {
-  background:#002244; 
-  display:flex; 
-  justify-content:center; 
-  padding:12px 8px; 
-
-  position: sticky;   /* This makes it stick */
-  top: 0;             /* Stick to the very top */
-  z-index: 1000;      /* Keeps it above other elements */
-}
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 12px;
-  font-weight: 500;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
-  padding-bottom: 4px;
-}
-
-nav a:hover {
-  color: #FFD600; /* golden highlight */
-  border-bottom: 2px solid #FFD600; /* underline effect */
-}
-
+    nav { background:#002244; display:flex; justify-content:center; padding:12px 8px; }
+    nav a { color:#fff; margin:0 18px; text-decoration:none; font-weight:700; transition: color 0.3s ease; font-family:'Roboto', sans-serif; }
+    nav a:hover { color:#FFD600; }
 
     /* hero banner */
-   /* hero banner */
-.hero { 
-  position: relative;
-  background:#001F4D url('images/affordable.jpg') center/cover no-repeat; 
-  color:#fff; 
-  text-align:center; 
-  padding:160px 20px;
-  width:100%;
-  display:flex;
-  align-items:center;   
-  justify-content:center;
-}
-
-.hero-overlay {
-  background: rgba(0, 0, 0, 0.55); /* gradient overlay */
-  padding: 40px 25px;
-  border-radius: 10px;
-  max-width: 700px;
-  animation: fadeSlideUp 1s ease forwards;
-  transform: translateY(30px);
-  opacity: 0;
-}
-
-.hero-overlay h1 {
-  font-size: 2rem;
-  margin-bottom: 12px;
-  color: #FFD600;
-}
-
-.hero-overlay p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  color: #fff;
-}
-
-.hero-btn {
-  background:#FFD600; 
-  color:#002244; 
-  padding:12px 24px; 
-  text-decoration:none; 
-  font-size:1rem; 
-  border-radius:6px; 
-  font-weight:bold; 
-  display:inline-block;
-  transition: all 0.3s ease;
-}
-
-.hero-btn:hover {
-  background:#ffea4d; 
-  transform: scale(1.05);
-}
+    .hero { 
+      position: relative;
+      background:#001F4D url('images/affordable.jpg') center/cover no-repeat; 
+      color:#fff; 
+      text-align:center; 
+      padding:160px 20px; /* reduced height */
+      width:100%;
+      display:flex;
+      align-items:center;   
+      justify-content:center;
+    }
 
     /* hero text strip below banner */
     .hero-text-strip {
@@ -325,47 +247,10 @@ nav a:hover {
         font-size: 0.85rem;
       }
     }
-    /* Scroll to Top Button */
-#scrollTopBtn {
-    display: none;             
-    position: fixed; 
-    bottom: 20px; 
-    right: 20px; 
-    z-index: 999; 
-    font-size: 10px;        /* smaller arrow */
-    background-color: #FFD600; 
-    color: #002244; 
-    border: none; 
-    outline: none; 
-    width: 28px;            /* balanced width */
-    height: 28px;           /* balanced height */
-    border-radius: 50%;    
-    cursor: pointer; 
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
-}
-
-#scrollTopBtn:hover {
-  background-color: #ffea4d;
-  transform: scale(1.1);
-}
-/* Left White Strip */
-.left-strip {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 24px;        /* tripled thickness */
-  height: 100vh;      /* full height */
-  background-color: #fff;
-  z-index: 1000;      /* keeps it above content */
-}
   </style>
 </head>
 <body>
 
-  <div class="left-strip"></div>
-<!-- Copilot: Create a sticky navbar that stays at the top when scrolling -->
-|
 <!-- HEADER -->
 <header>
   <div class="header-inner">
@@ -463,38 +348,6 @@ nav a:hover {
     });
   }, appearOptions);
   faders.forEach(fader => { appearOnScroll.observe(fader); });
-</script>
-
-<!-- Scroll to Top Button -->
-<button id="scrollTopBtn" title="Go to top">⬆</button>
-
-<script>
-  // Fade-in Scroll Animation
-  const faders = document.querySelectorAll('.fade-in');
-  const appearOptions = { threshold: 0.2 };
-  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('show');
-      observer.unobserve(entry.target);
-    });
-  }, appearOptions);
-  faders.forEach(fader => { appearOnScroll.observe(fader); });
-
-  // Scroll to Top Button
-  const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-  window.onscroll = function() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      scrollTopBtn.style.display = "block";
-    } else {
-      scrollTopBtn.style.display = "none";
-    }
-  };
-
-  scrollTopBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
 </script>
 
 </body>
