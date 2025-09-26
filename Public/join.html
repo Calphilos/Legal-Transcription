@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Join Verdilex Transcription Services</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #F1F4F8; scroll-behavior: smooth; }
+    header { text-align: center; padding: 20px; }
+    header img.logo { width: 60px; height: 60px; margin-bottom: 10px; }
+    header img.banner { width: 100%; max-height: 300px; object-fit: cover; border-radius: 10px; margin-bottom: 10px; }
+    nav { background: #002244; display: flex; justify-content: center; padding: 12px 8px; flex-wrap: wrap; }
+    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: 700; }
+    nav a.active { color: #FFD600; }
+    nav a:hover { text-decoration: underline; }
+    main { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+h2, h3 { color: #001F4D; }
+
+/* form styles */
+form label { 
+  display: block; 
+  margin-bottom: 12px; 
+}
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+.card {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  animation: fadeIn 1s ease;
+}
+
+.styled-list {
+  margin-left: 30px;
+  padding-left: 20px;
+}
+
+.styled-list li {
+  margin: 8px 0;
+  line-height: 1.6;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.styled-list li:hover {
+  transform: translateX(6px);
+  color: #002244;
+}
+
+.cta-banner {
+  background: #E6F4EA;
+  color: #256029;
+  font-weight: bold;
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin-top: 20px;
+  text-align: center;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+}
+
+/* animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="images/logo.svg" class="logo" alt="Verdilex Logo">
+  <img src="images/affordable.jpg" alt="Join Banner" class="banner">
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="services.html">Services</a>
+  <a href="join.html" class="active">Join Our Team</a>
+  <a href="contact.html">Contact Us</a>
+  <a href="faq.html">FAQ</a>
+</nav>
+
+<main>
+<section class="section">
+  <h1 class="join-title">Join Verdilex Transcription Services – Legal Transcriber</h1>
+  <div class="job-description card">
+    <p>
+      Verdilex Transcription Services is seeking qualified legal transcribers to join our team. 
+      As a legal transcriber, you will play a critical role in producing accurate, high-quality 
+      transcripts for a variety of legal proceedings. We are looking for detail-oriented professionals 
+      who are committed to excellence and can work independently to meet deadlines.
+    </p>
+
+    <h3>Qualifications</h3>
+    <p>Candidates must:</p>
+    <ul class="styled-list">
+      <li>Hold a Bachelor’s degree in any field.</li>
+      <li>Have a dedicated Windows computer equipped with Microsoft Word 2010 or higher and be confident in its use.</li>
+      <li>Have a stable Internet connection.</li>
+      <li>Have excellent command of the English language, including grammar, punctuation, and style.</li>
+      <li>Be confident in using technology to produce documents to the highest standard.</li>
+      <li>Be comfortable researching case information and references online.</li>
+      <li>Be committed to producing high-quality, accurate transcripts and ensuring deadlines are met.</li>
+      <li>Possess strong communication skills to ensure the best possible service.</li>
+      <li>Be available to work on a freelance (self-employed) basis, understanding that workload may vary.</li>
+    </ul>
+
+    <h3>Relevant Skills</h3>
+    <ul class="styled-list">
+      <li>Native-level proficiency in English and proficiency in another language is a plus.</li>
+      <li>Experience in one or more fields such as legal, medical, technical, audiovisual, or literary transcription.</li>
+      <li>Familiarity with CAT tools (Computer-Assisted Translation tools) is an advantage.</li>
+      <li>Strong attention to detail, research skills, and the ability to meet deadlines consistently.</li>
+      <li>At least 1 year of professional transcription or translation experience.</li>
+    </ul>
+
+    <p class="cta-banner">
+      If this opportunity aligns with your skills and experience, we invite you to apply below!
+    </p>
+  </div>
+</section>
+
+  <form id="applyForm">
+    <h3>Personal Information</h3>
+    <label>First Name *<input type="text" name="first_name" required></label>
+    <label>Last Name *<input type="text" name="last_name" required></label>
+    <label>Email *<input type="email" name="email" required></label>
+    <label>Password *<input type="password" name="password" required></label>
+    <label>Phone<input type="tel" name="phone"></label>
+    <label>Street Address<input type="text" name="address"></label>
+    <label>City<input type="text" name="city"></label>
+    <label>State / Region<input type="text" name="state"></label>
+    <label>Postal Code<input type="text" name="postal_code"></label>
+    <label>Country *
+      <select name="country" required>
+        <option value="">-- Select Country --</option>
+        <option value="United States">United States</option>
+        <option value="Canada">Canada</option>
+        <option value="United Kingdom">United Kingdom</option>
+        <option value="Australia">Australia</option>
+        <option value="Germany">Germany</option>
+        <option value="France">France</option>
+        <option value="India">India</option>
+        <option value="China">China</option>
+        <option value="Japan">Japan</option>
+        <option value="Other">Other</option>
+      </select>
+    </label>
+
+    <h3>Position & Experience</h3>
+    <label>Field Applying For *<select name="field" required>
+      <option value="">-- Select --</option>
+      <option>Legal Transcription</option>
+      <option>Business Transcription</option>
+      <option>General Transcription</option>
+    </select></label>
+    <label>Specialties<input type="text" name="specialties"></label>
+    <label>Desired Compensation<input type="text" name="desired_compensation"></label>
+    <label>Experience<select name="experience" required>
+      <option>No experience</option>
+      <option>Less than 1 year</option>
+      <option>1-3 years</option>
+      <option>4-10 years</option>
+      <option>10+ years</option>
+    </select></label>
+    <label>Availability<select name="availability" required>
+      <option>Less than 10 hours per week</option>
+      <option>10-19 hours per week</option>
+      <option>20-29 hours per week</option>
+      <option>30-39 hours per week</option>
+      <option>40+ hours (full time)</option>
+    </select></label>
+    <label>Hours Available<input type="text" name="hours"></label>
+
+    <h3>Technical Information</h3>
+    <label>Internet Connection<select name="internet">
+      <option>Dial-up</option>
+      <option>Cable</option>
+      <option>DSL</option>
+      <option>Other</option>
+    </select></label>
+    <label>Hardware?<select name="hardware">
+      <option value="true">Yes</option>
+      <option value="false">No</option>
+    </select></label>
+    <label>Software?<select name="software">
+      <option value="true">Yes</option>
+      <option value="false">No</option>
+    </select></label>
+    <label>Typing Speed (WPM)<input type="number" name="wpm"></label>
+    <label>Productivity<input type="text" name="productivity"></label>
+    <label>MS Office?<select name="ms_office">
+      <option value="true">Yes</option>
+      <option value="false">No</option>
+    </select></label>
+
+    <h3>Files</h3>
+    <label>Resume (PDF/DOCX) *<input type="file" name="resume" accept=".pdf,.doc,.docx" required></label>
+    <label>Academic Certificate *<input type="file" name="academic_cert" accept=".jpeg,.jpg,.bmp,.tif" required>
+      <small>Take clear photos in real time, well-lit, and highly visible.</small>
+    </label>
+    <fieldset>
+      <legend>ID(Front/Back)/Passport/Driving Licence *
+        <small>Take clear photos in real time, well-lit, and highly visible.</small></legend>
+      <label>Front<input type="file" name="id_front" accept=".jpeg,.jpg,.bmp,.tif" required></label>
+      <label>Back<input type="file" name="id_back" accept=".jpeg,.jpg,.bmp,.tif" required></label>
+    </fieldset>
+    <label>Additional Notes<textarea name="notes"></textarea></label>
+
+    <button type="submit" class="button">Submit Application</button>
+  </form>
+
+  <div id="statusMessage" style="margin-top:12px;"></div>
+</section>
+</main>
+
+<footer>
+  <p>© 2025 Verdilex Transcription Services</p>
+</footer>
+
+<!-- Supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const { createClient } = supabase;
+  const client = createClient(
+    'https://krdowsfsdsbtqoqmjfjw.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtyZG93c2ZzZHNidHFvcW1qZmp3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg2NDA0ODMsImV4cCI6MjA3NDIxNjQ4M30.cpxdd10rd0KKAQ3lgfR_tOAFK_LBW5oNd6FHjOFdj1g'
+  );
+
+  async function uploadFile(file, folder) {
+    if (!file) return null;
+    const fileName = `${folder}/${Date.now()}_${file.name}`;
+    const { data, error } = await client.storage
+      .from('applications')
+      .upload(fileName, file, { upsert: true });
+    if (error) throw error;
+    return data?.path || data?.fullPath || fileName;
+  }
+
+  document.getElementById('applyForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    const msg = document.getElementById('statusMessage');
+    msg.textContent = '⏳ Submitting your application... please wait';
+    msg.style.color = 'black';
+
+    try {
+      // Upload files
+      const resume_path = await uploadFile(fd.get('resume'), 'resumes');
+      const academic_cert_path = await uploadFile(fd.get('academic_cert'), 'certificates');
+      const id_front_path = await uploadFile(fd.get('id_front'), 'ids');
+      const id_back_path = await uploadFile(fd.get('id_back'), 'ids');
+
+      // Build data object
+      const data = {
+        first_name: fd.get('first_name'),
+        last_name: fd.get('last_name'),
+        email: fd.get('email'),
+        phone: fd.get('phone'),
+        address: fd.get('address'),
+        city: fd.get('city'),
+        state: fd.get('state'),
+        postal_code: fd.get('postal_code'),
+        country: fd.get('country'),
+        field: fd.get('field'),
+        specialties: fd.get('specialties'),
+        desired_compensation: fd.get('desired_compensation'),
+        experience: fd.get('experience'),
+        availability: fd.get('availability'),
+        hours: fd.get('hours'),
+        internet: fd.get('internet'),
+        hardware: fd.get('hardware') === 'true',
+        software: fd.get('software') === 'true',
+        wpm: fd.get('wpm') ? parseInt(fd.get('wpm')) : null,
+        productivity: fd.get('productivity'),
+        ms_office: fd.get('ms_office') === 'true',
+        resume_path,
+        academic_cert_path,
+        id_front_path,
+        id_back_path,
+        notes: fd.get('notes')
+      };
+
+      const { error } = await client.from('applicants').insert([data]);
+      if (error) throw error;
+
+      msg.style.color = 'green';
+      msg.innerHTML = '✅ Your application has been submitted successfully!';
+      document.getElementById('applyForm').reset();
+    } catch (err) {
+      console.error('Full error:', err);
+      msg.style.color = 'red';
+      msg.innerHTML = `❌ Error: ${err.message || JSON.stringify(err)}`;
+    }
+  });
+</script>
+
+</body>
+</html>

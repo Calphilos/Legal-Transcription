@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Verdilex Transcription Services</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #F1F4F8;
+      scroll-behavior: smooth;
+    }
+
+    /* HEADER */
+    header {
+      background: #001F4D;
+      color: #fff;
+      padding: 18px 0;
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      justify-content: center;
+      padding: 0 16px;
+    }
+    .logo {
+      width: 56px;
+      height: 56px;
+      display: block;
+    }
+    .title h1 {
+      margin: 0;
+      font-size: 1.6rem;
+      letter-spacing: 0.2px;
+    }
+    .title p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #e6eef8;
+    }
+
+    /* NAV */
+    nav {
+      background: #002244;
+      display: flex;
+      justify-content: center;
+      padding: 12px 8px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 18px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #FFD600;
+    }
+
+    /* SECTION */
+    .section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .services-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .services-content img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+      opacity: 0;
+      transform: translateX(40px);
+      transition: all 1s ease;
+    }
+    .services-content img.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* TEXT */
+    .services-text h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #001F4D;
+      position: relative;
+    }
+    .services-text h2::after {
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 4px;
+      background: #FFD600;
+      left: 0;
+      bottom: -8px;
+      border-radius: 2px;
+    }
+    .services-text p {
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 18px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+    .services-text p.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .services-text ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+    .services-text li {
+      margin-bottom: 10px;
+      font-size: 1.05em;
+      color: #333;
+      line-height: 1.6;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+    .services-text li:hover {
+      transform: translateX(6px);
+      color: #002244;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #001F4D;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <img src="images/logo.svg" alt="Verdilex Logo" class="logo">
+      <div class="title">
+        <h1>Verdilex Transcription Services</h1>
+        <p>Fast, Accurate & Secure Legal Transcription</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="join.html">Join Our Team</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="faq.html">FAQ</a>
+  </nav>
+
+  <!-- SERVICES SECTION -->
+  <section class="section">
+    <div class="services-content">
+      <div class="services-text">
+        <h2>Our Legal Transcription Services</h2>
+        <p>
+          Verdilex Transcription Services provides accurate, timely, and secure transcription solutions for legal professionals. Our expert team handles a wide range of transcription services tailored to meet the needs of courts, law firms, and attorneys.
+        </p>
+        <ul>
+          <li>Depositions – precise verbatim transcription of legal depositions.</li>
+          <li>Court Hearings – accurate transcripts of courtroom proceedings.</li>
+          <li>Real-Time Transcription – live transcription for meetings and hearings.</li>
+          <li>Arbitration & Mediation – professional transcripts for dispute resolution.</li>
+          <li>Connection Magic – synchronized audio-video transcription solutions.</li>
+          <li>Corporate Legal Meetings – reliable transcriptions for internal legal meetings.</li>
+          <li>Interviews & Statements – comprehensive transcription of witness interviews.</li>
+          <li>Legal Videography Transcription – integrate video with transcript for review.</li>
+          <li>Expert Testimony Transcripts – detailed records of expert witness statements.</li>
+          <li>Contract & Document Transcription – accurate transcription of contracts and agreements.</li>
+        </ul>
+        <p>
+          Every transcript is checked for quality and confidentiality, ensuring that your legal documentation is reliable and secure. Verdilex combines technology with human expertise to deliver services with unmatched precision.
+        </p>
+      </div>
+      <div>
+        <img src="images/1L3.jpg" alt="Legal transcription services" id="services-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Verdilex Transcription Services. All rights reserved.</p>
+  </footer>
+
+  <!-- SCROLL ANIMATION -->
+  <script>
+    const serviceText = document.querySelectorAll('.services-text p');
+    const serviceImg = document.getElementById('services-img');
+
+    const observerOptions = { threshold: 0.2 };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        }
+      });
+    }, observerOptions);
+
+    serviceText.forEach(p => observer.observe(p));
+    observer.observe(serviceImg);
+  </script>
+</body>
+</html>
