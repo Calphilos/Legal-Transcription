@@ -77,13 +77,14 @@ input, select, textarea {
 <body>
 </head>
 <body>
-<header>
+<header> 
   <img src="images/logo.svg" class="logo" alt="Verdilex Logo">
   <img src="images/affordable.jpg" alt="Join Banner" class="banner">
 
   <nav class="bg-gray-50 shadow-sm border-b border-border sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
+        <!-- Left logo and name -->
         <div class="flex items-center">
           <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 2L2 7v10c0 5.55 3.84 9.739 9 11 5.16-1.261 9-5.45 9-11V7l-10-5z"/>
@@ -91,17 +92,24 @@ input, select, textarea {
           </svg>
           <span class="font-playfair text-xl font-bold text-primary">Verdilex</span>
         </div>
+
+        <!-- Nav links -->
         <div class="hidden md:flex items-center space-x-8">
-          <a href="index.html#services" class="text-text-secondary hover:text-primary transition-colors duration-250">Services</a>
-          <a href="index.html#pricing" class="text-text-secondary hover:text-primary transition-colors duration-250">Pricing</a>
-          <a href="index.html#testimonials" class="text-text-secondary hover:text-primary transition-colors duration-250">Testimonials</a>
-          <a href="join.html" class="text-text-secondary hover:text-primary transition-colors duration-250">Join Our Team</a>
-          <a href="index.html#contact" class="text-text-secondary hover:text-primary transition-colors duration-250">Contact</a>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="index.html#pricing">Pricing</a>
+          <a href="index.html#testimonials">Testimonials</a>
+          <a href="join.html">Join Our Team</a>
+          <a href="index.html#contact">Contact</a>
           <button class="btn-primary">Get Free Consultation</button>
         </div>
+
+        <!-- Mobile menu -->
         <button class="md:hidden p-2" id="mobile-menu-btn">
           <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
         </button>
       </div>
